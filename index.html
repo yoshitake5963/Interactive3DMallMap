@@ -1017,6 +1017,57 @@
 					<div class="content__item" data-space="4.06" data-category="2">
 						<h3 class="content__item-title">クラウドソーシングユニット</h3>
 						<div class="content__item-details">
+							<div ng-app="mdApp">
+								<section ng-controller="mdController as Ctrl">
+								  <ul>
+									<li ng-repeat="user in Ctrl.users">
+									  <a ng-click="Ctrl.showProfile($event, $index)">
+										<div class="imageWrapper">
+										  <img src="{{user.avatar}}" >
+										</div>
+							  
+										<div class="info">
+										  <h3>{{user.name}}</h3>
+										  <p>{{user.title}}</p>
+										</div>
+									  </a>
+									</li>
+								  </ul>
+							  
+								  <div class="profile">
+									<header ng-style="{backgroundColor:Ctrl.user.color}">
+									  <h3>{{Ctrl.user.name}}</h3>
+									  <small>{{Ctrl.user.title}}</small>
+									</header>
+							  
+									<ul>
+									  <li>
+										<quote>{{Ctrl.user.description}}</quote>
+									  </li>
+							  
+									  <li>
+										<h4>Address:</h4>
+										<p>{{Ctrl.user.address}}</p>
+									  </li>
+							  
+									  <li>
+										<h4>Phone:</h4>
+										<p>{{Ctrl.user.phone}}</p>
+									  </li>
+							  
+									  <li>
+										<h4>Email:</h4>
+										<p>{{Ctrl.user.email}}</p>
+									  </li>
+									</ul>
+							  
+									<a class="close-button" 
+									   ng-style="{backgroundColor:Ctrl.user.color}"
+									   ng-click="Ctrl.closeProfile($event)">&#10005;</a>
+								  </div>    
+								</section>
+							  </div>
+<!--							  
 							<p class="content__meta">
 								<span class="content__meta-item"><strong>Opening Hours:</strong> 7:30AM &mdash; 09:00PM</span> 
 								<span class="content__meta-item"><strong>Phone:</strong> (0) 66 7749036</span>
@@ -1027,6 +1078,7 @@
 								<span class="content__meta-item"><strong>Opening Hours:</strong> 7:30AM &mdash; 09:00PM</span> 
 								<span class="content__meta-item"><strong>Phone:</strong> (0) 66 7749036</span>
 							</p>
+-->
 							<p class="content__desc">Vigna unguiculata subsp sesquipedalis vicia faba eruca sativa pisum sativum abelmoschus esculentus. Chenopodium album glycine max tarhui, chocho. Cordyline fruticosa apium graveolens sinapis alba.</p>
 						</div>
 					</div>

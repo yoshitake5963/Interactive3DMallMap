@@ -408,6 +408,9 @@
 		else {
 			spaceref = spacerefval;
 			openContentArea();
+
+			// make material design profiles
+			makePlofile();
 		}
 		
 		// remove class active (if any) from current list item
