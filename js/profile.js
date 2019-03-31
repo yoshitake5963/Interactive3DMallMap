@@ -1,4 +1,4 @@
-function  makePlofile() {
+(function() {
     "use strict";
   
     angular.module("mdApp", []);
@@ -139,4 +139,4 @@ function  makePlofile() {
       }
   
     }
-  }
+  }());
